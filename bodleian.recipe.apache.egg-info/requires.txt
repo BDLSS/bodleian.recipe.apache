@@ -1,0 +1,9 @@
+setuptools
+zc.buildout
+zc.recipe.cmmi
+Cheetah>=2.4.4
+
+[tests]
+zope.testing
+zc.buildout
+Cheetah

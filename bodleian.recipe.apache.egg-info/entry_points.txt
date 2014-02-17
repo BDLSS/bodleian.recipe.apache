@@ -1,0 +1,4 @@
+[zc.buildout]
+config = bodleian.recipe.apache:ConfigureRecipe
+build = bodleian.recipe.apache:BuildRecipe
+
