@@ -1,13 +1,13 @@
 Metadata-Version: 1.0
-Name: plone.recipe.apache
+Name: bodleian.recipe.apache
 Version: 0.3.2
 Summary: An zc buildout for build and configure apache
-Home-page: https://svn.plone.org/svn/collective/buildout/plone.recipe.apache
+Home-page: https://github.com/BDLSS/bodleian.recipe.apache.git
 Author: Paris sprint 2008
 Author-email: products-developers@lists.plone.org
 License: ZPL
 Description: 
-        This recipe allows you to build or to configure an apache for your Zope/plone
+        This recipe allows you to build or to configure an apache for your Zope/bodleian
         platform.
         
         Building
@@ -50,7 +50,7 @@ Description:
         ... parts = apachebuild
         ...
         ... [apachebuild]
-        ... recipe = plone.recipe.apache:build
+        ... recipe = bodleian.recipe.apache:build
         ... url = http://apache.multidist.com/httpd/httpd-2.2.10.tar.gz
         ... """ )
         
@@ -131,8 +131,8 @@ Description:
         target_hostname must match hostname defined in backends.
         For example:
         
-        www.plone.org:plone.org
-        (in this case all requests to www.plone.org are redirected to plone.org
+        www.bodleian.org:bodleian.org
+        (in this case all requests to www.bodleian.org are redirected to bodleian.org
         which has to be defined in backends parameter)
         
         extras
@@ -150,15 +150,15 @@ Description:
         ... parts = apacheconfig
         ...
         ... [apacheconfig]
-        ... recipe = plone.recipe.apache:config
+        ... recipe = bodleian.recipe.apache:config
         ... mainconfig = /usr/local/apache/config/httpd.conf
         ... bind = 80
-        ... backends = plone.org:127.0.0.1:3128
-        ... zope2_vhm_map = plone.org:/plone
-        ... redirects = www.plone.org:plone.org
+        ... backends = bodleian.org:127.0.0.1:3128
+        ... zope2_vhm_map = bodleian.org:/bodleian
+        ... redirects = www.bodleian.org:bodleian.org
         ... resources =
-        ...    docs:${buildout:directory}/plone/recipe/apache/doctests
-        ...    tests:${buildout:directory}/plone/recipe/apache/doctests
+        ...    docs:${buildout:directory}/bodleian/recipe/apache/doctests
+        ...    tests:${buildout:directory}/bodleian/recipe/apache/doctests
         ... resource-expires =
         ...    \.(txt)$:"access plus 1 day"
         ...    \.(py)$:"access plus 2 weeks"
@@ -193,7 +193,7 @@ Description:
         0.3.2 (2009-xx-yy)
         ------------------
         
-        - Fix Cheetah dependency under 2.4 to be coherent with Plone 4
+        - Fix Cheetah dependency under 2.4 to be coherent with bodleian 4
         [encolpe]
         
         - Protection against crash when mainconfig file is not writeable.
@@ -252,7 +252,7 @@ Description:
         Download
         ========
         
-Keywords: plone recipe apache configure
+Keywords: bodleian recipe apache configure
 Platform: UNKNOWN
 Classifier: Framework :: Buildout
 Classifier: Intended Audience :: Developers

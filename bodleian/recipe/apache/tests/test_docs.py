@@ -22,7 +22,7 @@ def setUp(test):
     zc.buildout.testing.buildoutSetUp(test)
 
     # Install the recipe in develop mode
-    zc.buildout.testing.install_develop('plone.recipe.apache', test)
+    zc.buildout.testing.install_develop('bodleian.recipe.apache', test)
     zc.buildout.testing.install_develop('zc.recipe.cmmi', test)
 
 
